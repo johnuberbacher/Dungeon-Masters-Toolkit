@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
 import 'package:flutter/services.dart';
-import 'profile.dart';
+import 'package:path_provider/path_provider.dart';
 import 'downloads.dart';
 import 'home.dart';
 import 'generateNPC.dart';
@@ -12,8 +13,8 @@ void main() {
     title: 'Named Routes Demo',
     initialRoute: '/',
     routes: {
-      '/': (context) => HomeScreen(),
-      '/editNPCScreen': (context) => editNPCScreen(),
+      '/': (context) => MainPage(),
+      '/EditNPCScreen': (context) => EditNPCScreen(),
     },
   ));
 }
@@ -38,10 +39,10 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.black,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
-
     );
   }
 }
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -50,11 +51,11 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
+
 Color _colorFromHex(String hexColor) {
   final hexCode = hexColor.replaceAll('#', '');
   return Color(int.parse('FF$hexCode', radix: 16));
 }
-
 
 class FirstRoute extends StatelessWidget {
   @override
@@ -69,7 +70,7 @@ class FirstRoute extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => editNPCScreen()),
+              MaterialPageRoute(builder: (context) => EditNPCScreen()),
             );
           },
         ),
@@ -78,27 +79,12 @@ class FirstRoute extends StatelessWidget {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 class _MyHomePageState extends State<MyHomePage> {
-
   int bottomSelectedIndex = 0;
   List<BottomNavigationBarItem> buildBottomNavBarItems() {
     return [
       BottomNavigationBarItem(
-          icon: new Icon(Icons.home),
-          title: new Text('Home')
-      ),
+          icon: new Icon(Icons.home), title: new Text('Home')),
       BottomNavigationBarItem(
         icon: new Icon(Icons.group),
         title: new Text('NPC Generator'),
@@ -108,9 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: new Text('Encounter Generator'),
       ),
       BottomNavigationBarItem(
-          icon: Icon(Icons.account_circle ),
-          title: Text('editNPCScreen')
-      )
+          icon: Icon(Icons.account_circle), title: Text('EditNPCScreen'))
     ];
   }
 
@@ -126,13 +110,14 @@ class _MyHomePageState extends State<MyHomePage> {
         pageChanged(index);
       },
       children: <Widget>[
-        HomeScreen(),
+        MainPage(),
         GenerateNPC(),
         Downloads(),
         FirstRoute(),
       ],
     );
   }
+
   void initState() {
     super.initState();
   }
@@ -142,12 +127,15 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomSelectedIndex = index;
     });
   }
+
   void bottomTapped(int index) {
     setState(() {
       bottomSelectedIndex = index;
-      pageController.animateToPage(index, duration: Duration(milliseconds: 500), curve: Curves.ease);
+      pageController.animateToPage(index,
+          duration: Duration(milliseconds: 500), curve: Curves.ease);
     });
   }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: _colorFromHex("f3f3f3"),
@@ -159,8 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: <Widget>[
           // action button
           IconButton(
-            icon:
-            Icon(
+            icon: Icon(
               Icons.cast,
               color: Colors.white,
             ),
@@ -185,7 +172,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => editNPCScreen()),
+            MaterialPageRoute(builder: (context) => EditNPCScreen()),
           );
         },
         child: Icon(Icons.add),

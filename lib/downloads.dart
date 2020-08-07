@@ -144,68 +144,68 @@ class _DownloadsState extends State<Downloads> {
                   ),
                 ),
               ),
-          Container(
-            margin: new EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
-            alignment: Alignment.centerLeft, // Align however you like (i.e .centerRight, centerLeft)
-            child: Card(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  new Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text('Random Encounter!',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+              Container(
+                margin: new EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
+                alignment: Alignment.centerLeft, // Align however you like (i.e .centerRight, centerLeft)
+                child: Card(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      new Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Random Encounter!',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                            ),
+                            Container(
+                              height: 25.0,
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: RaisedButton(
+                                    textColor: Colors.white,
+                                    color: Colors.lightGreen,
+                                    onPressed: () {},
+                                    child: const Text('Non Combat',
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    ),
+                                ),
                               ),
-                              textAlign: TextAlign.left,
                             ),
+                           ],
                         ),
-                        Container(
-                          height: 25.0,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: RaisedButton(
-                                textColor: Colors.white,
-                                color: Colors.lightGreen,
-                                onPressed: () {},
-                                child: const Text('Non Combat',
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                ),
-                            ),
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
+                        child: Text('Scare off an invading swarm of pests and also break into or out of a prison.'),
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
+                        child: Text('OR',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
                           ),
-                        ),
-                       ],
-                    ),
-                  ),
-                  new Padding(
-                    padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
-                    child: Text('Scare off an invading swarm of pests and also break into or out of a prison.'),
-                  ),
-                  new Padding(
-                    padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
-                    child: Text('OR',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                          ),
                       ),
+                      new Padding(
+                        padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
+                        child: Text('Expose a corrupt leader involved in murder and also infiltrate a fortress in lockdown. '),
                       ),
+                    ],
                   ),
-                  new Padding(
-                    padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
-                    child: Text('Expose a corrupt leader involved in murder and also infiltrate a fortress in lockdown. '),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ),
         ],
       ),
     );

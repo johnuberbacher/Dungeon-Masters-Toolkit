@@ -1,4 +1,4 @@
-name: disney_plus
+name: dungeon_masters_toolkit
 description: A new Flutter application.
 
 # The following defines the version and build number for your application.
@@ -19,7 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  path_provider: ^1.6.11
   google_fonts: ^0.2.0
 
   # The following adds the Cupertino Icons font to your application.
