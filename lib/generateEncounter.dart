@@ -41,7 +41,8 @@ class GenerateEncounter extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Padding(
-                              padding: const EdgeInsets.only(bottom: 15.0, top: 30.0),
+                              padding: const EdgeInsets.only(
+                                  bottom: 15.0, top: 30.0),
                               child: Text(
                                 "Encounter Generator",
                                 style: GoogleFonts.robotoCondensed(
@@ -56,14 +57,13 @@ class GenerateEncounter extends StatelessWidget {
                               "Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque. Vulputate sapien nec sagittis aliquam malesuada bibendum. Sed elementum tempus egestas sed sed risus pretium. ",
                               style: GoogleFonts.roboto(
                                 textStyle: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white
-                                ),
+                                    fontSize: 12, color: Colors.white),
                               ),
                               textAlign: TextAlign.center,
                             ),
                             new Padding(
-                              padding: const EdgeInsets.only(top: 15.0, bottom: 10.0),
+                              padding: const EdgeInsets.only(
+                                  top: 15.0, bottom: 10.0),
                               child: Divider(
                                 color: Colors.white,
                                 height: 10,
@@ -82,15 +82,14 @@ class GenerateEncounter extends StatelessWidget {
                               ),
                             )
                           ],
-                        )
-                    ),
+                        )),
                   ],
                 ),
               ),
-
               Container(
                 margin: new EdgeInsets.only(top: 0.0, left: 15.0, right: 15.0),
-                alignment: Alignment.centerLeft, // Align however you like (i.e .centerRight, centerLeft)
+                alignment: Alignment
+                    .centerLeft, // Align however you like (i.e .centerRight, centerLeft)
                 child: Card(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -102,7 +101,8 @@ class GenerateEncounter extends StatelessWidget {
                           children: [
                             Align(
                               alignment: Alignment.centerLeft,
-                              child: Text('Enemy Encounter!',
+                              child: Text(
+                                'Enemy Encounter!',
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -118,7 +118,8 @@ class GenerateEncounter extends StatelessWidget {
                                   textColor: Colors.white,
                                   color: Colors.red,
                                   onPressed: () {},
-                                  child: const Text('Combat',
+                                  child: const Text(
+                                    'Combat',
                                     style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
@@ -131,20 +132,26 @@ class GenerateEncounter extends StatelessWidget {
                         ),
                       ),
                       new Padding(
-                        padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
-                        child: Text('Scare off an invading swarm of pests and also break into or out of a prison.'),
+                        padding: const EdgeInsets.only(
+                            bottom: 15.0, left: 15.0, right: 15.0),
+                        child: Text(
+                            'Scare off an invading swarm of pests and also break into or out of a prison.'),
                       ),
                       new Padding(
-                        padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
-                        child: Text('OR',
+                        padding: const EdgeInsets.only(
+                            bottom: 15.0, left: 15.0, right: 15.0),
+                        child: Text(
+                          'OR',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       new Padding(
-                        padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
-                        child: Text('Expose a corrupt leader involved in murder and also infiltrate a fortress in lockdown.'),
+                        padding: const EdgeInsets.only(
+                            bottom: 15.0, left: 15.0, right: 15.0),
+                        child: Text(
+                            'Expose a corrupt leader involved in murder and also infiltrate a fortress in lockdown.'),
                       ),
                     ],
                   ),
@@ -152,7 +159,8 @@ class GenerateEncounter extends StatelessWidget {
               ),
               Container(
                 margin: new EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
-                alignment: Alignment.centerLeft, // Align however you like (i.e .centerRight, centerLeft)
+                alignment: Alignment
+                    .centerLeft, // Align however you like (i.e .centerRight, centerLeft)
                 child: Card(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -164,7 +172,8 @@ class GenerateEncounter extends StatelessWidget {
                           children: [
                             Align(
                               alignment: Alignment.centerLeft,
-                              child: Text('Random Encounter!',
+                              child: Text(
+                                'Random Encounter!',
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -180,7 +189,8 @@ class GenerateEncounter extends StatelessWidget {
                                   textColor: Colors.white,
                                   color: Colors.lightGreen,
                                   onPressed: () {},
-                                  child: const Text('Non Combat',
+                                  child: const Text(
+                                    'Non Combat',
                                     style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
@@ -193,20 +203,26 @@ class GenerateEncounter extends StatelessWidget {
                         ),
                       ),
                       new Padding(
-                        padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
-                        child: Text('Scare off an invading swarm of pests and also break into or out of a prison.'),
+                        padding: const EdgeInsets.only(
+                            bottom: 15.0, left: 15.0, right: 15.0),
+                        child: Text(
+                            'Scare off an invading swarm of pests and also break into or out of a prison.'),
                       ),
                       new Padding(
-                        padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
-                        child: Text('OR',
+                        padding: const EdgeInsets.only(
+                            bottom: 15.0, left: 15.0, right: 15.0),
+                        child: Text(
+                          'OR',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       new Padding(
-                        padding: const EdgeInsets.only(bottom: 15.0,left: 15.0, right: 15.0),
-                        child: Text('Expose a corrupt leader involved in murder and also infiltrate a fortress in lockdown. '),
+                        padding: const EdgeInsets.only(
+                            bottom: 15.0, left: 15.0, right: 15.0),
+                        child: Text(
+                            'Expose a corrupt leader involved in murder and also infiltrate a fortress in lockdown. '),
                       ),
                     ],
                   ),
@@ -214,7 +230,6 @@ class GenerateEncounter extends StatelessWidget {
               ),
             ],
           ),
-        )
-    );
+        ));
   }
 }
