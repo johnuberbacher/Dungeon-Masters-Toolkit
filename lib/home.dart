@@ -11,6 +11,7 @@ void main() {
   runApp(
     MaterialApp(
       title: 'Reading and Writing Files',
+      debugShowCheckedModeBanner: false,
     ),
   );
 }

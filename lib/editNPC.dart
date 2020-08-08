@@ -25,14 +25,14 @@ class EditNPCScreen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                height: 260.0,
+                height: 210.0,
                 width: MediaQuery.of(context).size.width * 1,
                 child: Stack(
                   children: <Widget>[
                     Container(
                       child: Image.asset(
                         'assets/images/backdrops/backdrop_1.jpg',
-                        height: 245,
+                        height: 180,
                         width: double.infinity,
                         fit: BoxFit.cover,
                       ),
@@ -46,7 +46,7 @@ class EditNPCScreen extends StatelessWidget {
                               padding: const EdgeInsets.only(
                                   bottom: 15.0, top: 30.0),
                               child: Text(
-                                "NPC Generator",
+                                "Create Custom NPC",
                                 style: GoogleFonts.robotoCondensed(
                                   textStyle: TextStyle(
                                       fontSize: 24,
